@@ -10,9 +10,9 @@ tree.addEventListener('click', (e) => {
   const li = e.target;
   const child = li.firstElementChild;
 
-  if (child && li.parentElement !== tree) {
+  if (child) {
     if (child.style.display === 'none') {
-      child.style.display = 'block';
+      child.style.display = '';
     } else {
       child.style.display = 'none';
     }
