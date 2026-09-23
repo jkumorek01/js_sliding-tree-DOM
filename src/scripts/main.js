@@ -7,8 +7,13 @@ const tree = document.querySelector('.tree');
 // console.log(products);
 
 tree.addEventListener('click', (e) => {
-  const li = e.target;
-  const child = li.firstElementChild;
+  if (e.target.tagName !== 'SPAN') {
+    return;
+  }
+  
+  const li = e.target.parentElement;
+  const child = li.lastElementChild;
+
 
   if (child) {
     if (child.style.display === 'none') {
